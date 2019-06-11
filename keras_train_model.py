@@ -1,3 +1,5 @@
+# SinisterJK
+# https://github.com/tongJK/Basic-ML-ANN/edit/master/keras_train_model.py
 
 import os
 import keras
@@ -11,16 +13,16 @@ verbose = 1
 patience = 50
 batch_size = 16
 num_channels = 3
-img_width, img_height = 224, 224
+img_width, img_height = 224, 224 # size of train & validation images
 
-train_data = 'train'
-validation_data = 'validation'
+train_data = 'train' # path of train data
+validation_data = 'validation' # path of validate data
 
-num_classes = 224
-num_train_samples = 9985
-num_valid_samples = 2126
+num_classes = 224 # number of data classes
+num_train_samples = 9985 # number of test samples
+num_valid_samples = 2126 # number of validate samples
 
-num_epochs = 100
+num_epochs = 100 # number of ahh, in my language is how many round you want to your trained model to evolution
 
 if __name__ == '__main__':
     # build a classifier model
