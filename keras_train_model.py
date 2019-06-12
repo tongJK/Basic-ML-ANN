@@ -41,7 +41,7 @@ if __name__ == '__main__':
     reduce_lr = ReduceLROnPlateau('val_acc', factor=0.1, patience=int(patience / 4), verbose=1)
 
     trained_models_path = 'models/'
-    model_names = os.path.join(trained_models_path, 'model.{val_acc:.2f}_at_{epoch:02d}.hdf5')
+    model_names = os.path.join(trained_models_path, 'model.{epoch:02d}_with_{val_acc:.2f}.hdf5')
 
     model_checkpoint = ModelCheckpoint(model_names, monitor='val_acc', verbose=1, save_best_only=True)
     callbacks = [tensor_board, model_checkpoint, csv_logger, early_stop, reduce_lr]
